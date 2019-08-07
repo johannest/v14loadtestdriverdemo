@@ -37,9 +37,11 @@ Other basic workflow steps:
   - run `mvn jetty:run -Pproduction` in ui module
   - open http://localhost:8080/
 
-### Branching information:
-* `master` the latest version of the starter, using the latest platform version
-* `v10` the version for Vaadin 10
-* `v11` the version for Vaadin 11
-* `v12` the version for Vaadin 12
-* `v13` the version for Vaadin 13
+## LoadTestDriver demo
+
+1. Make sure that AbstractViewTest.RUN_LOADTESTDRIVER = true
+1. Start app server with ui project's war deployed
+1. Modify paths in AbstractViewTest.setupLoadTestDriver. For example to `.withPath("C:\dev\v14loadtestdriverdemo\v14loadtestdriverdemo-ui\src\test\scala")`
+1. Run TestBench test SampleCrudViewIT
+1. The test is converted to Gatling load test and saved into the specified path
+1. Execute the Gatling test from command line e.g. `gatling -sf . -rsf .`
