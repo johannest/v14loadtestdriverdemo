@@ -41,6 +41,8 @@ Other basic workflow steps:
 
 1. Make sure that AbstractViewTest.RUN_LOADTESTDRIVER = true
 1. Start app server with ui project's war deployed
+1. Download and add to the PATH [ChromeDriver](https://chromedriver.chromium.org/), if not yet done. Otherwise,
+ you can specify a path to a driver via `System.setProperty("webdriver.chrome.driver", "path_to_driver\chromedriver.exe");`. 
 1. Modify paths in AbstractViewTest.setupLoadTestDriver. For example to `.withPath("C:\dev\v14loadtestdriverdemo\v14loadtestdriverdemo-ui\src\test\scala")`
 1. Run TestBench test SampleCrudViewIT
 1. The test is converted to Gatling load test and saved into the specified path
