@@ -33,7 +33,7 @@
         <dependency>
             <groupId>org.hibernate.validator</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.0.16.Final</version>
+            <version>6.1.0.Final</version>
         </dependency>
 
         <dependency>
@@ -92,7 +92,7 @@
         <dependency>
             <groupId>org.vaadin.johannest</groupId>
             <artifactId>loadtestdriver</artifactId>
-            <version>0.3.2</version>
+            <version>0.3.3</version>
         </dependency>
 
     </dependencies>
@@ -173,7 +173,7 @@
                 <dependency>
                     <groupId>io.gatling.highcharts</groupId>
                     <artifactId>gatling-charts-highcharts</artifactId>
-                    <version>${gatling.version}</version>
+                    <version>3.0.3</version>
                     <scope>test</scope>
                 </dependency>
             </dependencies>
@@ -182,12 +182,12 @@
                     <plugin>
                         <groupId>net.alchim31.maven</groupId>
                         <artifactId>scala-maven-plugin</artifactId>
-                        <version>${scala-maven-plugin.version}</version>
+                        <version>3.4.4</version>
                     </plugin>
                     <plugin>
                         <groupId>io.gatling</groupId>
                         <artifactId>gatling-maven-plugin</artifactId>
-                        <version>${gatling-plugin.version}</version>
+                        <version>3.0.3</version>
                     </plugin>
                 </plugins>
             </build>
