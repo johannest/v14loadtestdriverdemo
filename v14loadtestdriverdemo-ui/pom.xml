@@ -188,6 +188,9 @@
                         <groupId>io.gatling</groupId>
                         <artifactId>gatling-maven-plugin</artifactId>
                         <version>${gatling-plugin.version}</version>
+                        <configuration>
+                            <resourcesFolder>${project.basedir}/src/test/scala</resourcesFolder>
+                        </configuration>
                     </plugin>
                 </plugins>
             </build>
