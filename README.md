@@ -1,41 +1,21 @@
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin-flow/Lobby#?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+# LoadTestDriver test project
 
-# Bookstore App Starter for Vaadin Flow
-
-A project example for a Vaadin application that only requires a Servlet 3.1 container to run (no other JEE dependencies). The UI is built with Java only.
-
-The easiest way of using it is via [https://vaadin.com/start](https://vaadin.com/start) - you can choose the package naming you want.
+A project (based on Bookstore App Starter for Vaadin Flow) demonstrating the usage of the [LoadTestDriver add-on](https://github.com/johannest/loadtestdriver). The UI is built with Java only.
 
 ## Prerequisites
 
 The project can be imported into the IDE of your choice, with Java 8 or 11 installed, as a Maven project.
 
 ## Project Structure
-
 The project consists of the following three modules:
 
 - parent project: common metadata and configuration
-- bookstore-starter-flow-ui: main application module that includes views
+- bookstore-starter-flow-ui: main application module that includes views, and TestBench tests
 - bookstore-starter-flow-backend: POJO classes and mock services being used in the ui
 
 ## Workflow
 
 To compile the entire project, run "mvn install" in the parent project.
-
-Other basic workflow steps:
-
-- getting started
-- compiling the whole project
-  - run `mvn install` in parent project
-- developing the application
-  - edit code in the ui module
-  - run `mvn jetty:run` in ui module
-  - open http://localhost:8080/
-- creating a production mode war
-  - run `mvn package -Pproduction` in the ui module or in the parent module
-- running in production mode
-  - run `mvn jetty:run -Pproduction` in ui module
-  - open http://localhost:8080/
 
 ## LoadTestDriver demo
 
@@ -46,4 +26,8 @@ Other basic workflow steps:
 1. Modify paths in AbstractViewTest.setupLoadTestDriver. For example to `.withPath("C:\dev\v14loadtestdriverdemo\v14loadtestdriverdemo-ui\src\test\scala")`
 1. Run TestBench test SampleCrudViewIT
 1. The test is converted to Gatling load test and saved into the specified path
-1. Execute the Gatling test from command line e.g. `gatling -sf . -rsf .`
+1. If the Gatling test and its requests are stored into src/test/scala, you can execute test by Gatling Maven plugin: `mvn -Pscalability gatling:test`
+1. Otherwise, navigate to the folder containing the test and resources and then execute the Gatling test from the command line e.g. `gatling -sf . -rsf .`
+
+For more information on Gatling Maven Plugin: https://gatling.io/docs/3.0/extensions/maven_plugin/
+
