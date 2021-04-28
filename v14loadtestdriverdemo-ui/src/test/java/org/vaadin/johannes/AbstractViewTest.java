@@ -60,17 +60,18 @@ public abstract class AbstractViewTest extends TestBenchTestCase {
     }
 
     public void setupLoadTestDriver() {
-        WebDriver driver = new LoadTestDriverBuilder().
-                withIpAddress(LoadTestDriver.getLocalIpAddress()).
-                withTestName("CrudAddProduct").
-                withNumberOfConcurrentUsers(1).
-                withRampUpTimeInSeconds(1).
-                withPath("C:\\dev\\idea\\v14loadtestdriverdemo\\v14loadtestdriverdemo-ui\\src\\test\\scala").
-                withResourcesPath("C:\\dev\\idea\\v14loadtestdriverdemo\\v14loadtestdriverdemo-ui\\src\\test\\scala").
-                withStaticResourcesIngnoring().
-                withTestRefactoring().
-                withHeadlessEnabled(false).
-                build();
+//        WebDriver driver = new LoadTestDriverBuilder().
+//                withIpAddress(LoadTestDriver.getLocalIpAddress()).
+//                withTestName("CrudAddProduct").
+//                withNumberOfConcurrentUsers(1).
+//                withRampUpTimeInSeconds(1).
+//                withPath("C:\\dev\\idea\\v14loadtestdriverdemo\\v14loadtestdriverdemo-ui\\src\\test\\scala").
+//                withResourcesPath("C:\\dev\\idea\\v14loadtestdriverdemo\\v14loadtestdriverdemo-ui\\src\\test\\scala").
+//                withStaticResourcesIngnoring().
+//                withTestRefactoring().
+//                withHeadlessEnabled(false).
+//                build();
+        WebDriver driver = new ChromeDriver();
         setDriver(driver);
     }
 
