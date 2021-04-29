@@ -32,7 +32,7 @@ import org.vaadin.johannest.loadtestdriver.LoadTestDriverBuilder;
  * <a href="https://vaadin.com/docs/v10/testbench/testbench-overview.html">Vaadin TestBench</a>.
  */
 public abstract class AbstractViewTest extends TestBenchTestCase {
-    private static final int SERVER_PORT = 8080;
+    private static final int SERVER_PORT = 9999;
     private static final boolean RUN_LOADTESTDRIVER = true;
 
     private final String route;
@@ -104,7 +104,7 @@ public abstract class AbstractViewTest extends TestBenchTestCase {
      * @return URL to route
      */
     private static String getURL(String route) {
-        return LoadTestDriver.getLocalIpAddressWithPortAndContextPath(8080, route);
+        return LoadTestDriver.getLocalIpAddressWithPortAndContextPath(9999, route);
     }
 
     @After
