@@ -190,6 +190,7 @@
                         <version>${gatling-plugin.version}</version>
                         <configuration>
                             <resourcesFolder>${project.basedir}/src/test/scala</resourcesFolder>
+                            <resultsFolder>${project.basedir}/src/test/results</resultsFolder>
                         </configuration>
                     </plugin>
                 </plugins>
