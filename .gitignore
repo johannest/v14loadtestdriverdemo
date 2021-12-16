@@ -30,3 +30,4 @@ hs_err_pid*
 /v14loadtestdriverdemo-ui/target/
 /v14loadtestdriverdemo-backend/target/
 /v14loadtestdriverdemo-ui/node_modules/
+/v14loadtestdriverdemo-ui/src/test/results/
